@@ -108,7 +108,7 @@ public class StudyNewJava8_1 {
         //调用重写后的抽象方法
         con.accept("北京");
 
-        //方法引用  参数都给省了
+        //方法引用  左边和右边的参数都给省了
         PrintStream out = System.out;  //对象
         Consumer<String> con2 = out :: println;
         con2.accept("beijing");
