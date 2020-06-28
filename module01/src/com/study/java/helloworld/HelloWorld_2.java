@@ -55,6 +55,7 @@ public class HelloWorld_2 {
             }
 
         // 从键盘分别输入年、月、日，判断这一天是当年的第几天
+        // 利用switch case 的break属性 进行倒着算 绝妙
             System.out.println("请输入 年、月、日:");
             Scanner sc=new Scanner(System.in);
             int year = sc.nextInt();
@@ -152,7 +153,7 @@ public class HelloWorld_2 {
         for(int i=1; i<=100;i++){
             if(i%7==0){
                 count++;
-                sum+=i;
+                sum+=i;    //如果步长是1就是++，现在步长不是1 就用 +=
             }
         }
         System.out.println("7的倍数的个数是:"+count+"个,7的倍数的总和是:"+sum);
@@ -210,8 +211,8 @@ public class HelloWorld_2 {
         System.out.println("奇数的个数为:"+y+" 偶数的个数为:"+x);
 
         // 九九乘法表
-        for(int a=1;a<=9;a++){
-            for(int b=1; b<=a; b++){
+        for(int a=1;a<=9;a++){   //行数
+            for(int b=1; b<=a; b++){ //列数
                 System.out.print(a+"*"+b+"="+(a*b)+"  ");
             }
             System.out.println();

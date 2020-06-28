@@ -12,6 +12,10 @@ import java.util.Scanner;
     内存
     1.只要是看到new就代表重新再堆内存中开辟一块空间
     2.局部变量存放在栈(stack)中，存放的是地址 地址是可以改变的，指向新的地址
+
+    关于在操作角标时什么时候用for循环，什么时候用while？
+      角标每次移动+1 可以用for循环比较好
+      角标每次移动不是1，可以用while循环比较好
  */
 public class StudyArray {
 
@@ -95,7 +99,7 @@ public class StudyArray {
         int tmp;
         for(int i=0;i<array3.length/2;i++){
             tmp=array3[i];
-            array3[i]=array3[array3.length-i-1];
+            array3[i]=array3[array3.length-i-1];   // -i是为了考虑大于角标一的翻转情况
             array3[array3.length-i-1]=tmp;
         }
         System.out.println("翻转的为:"+Arrays.toString(array3));

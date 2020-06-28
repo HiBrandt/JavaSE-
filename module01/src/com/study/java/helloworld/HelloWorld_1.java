@@ -8,13 +8,20 @@ public class HelloWorld_1 {
    /*     // Hello World
         System.out.println("Hello World ");
 
-        // ++先运算 再进行==
+        // ++先运算 再进行==   ==计算  再进行后加加
         int x = 1;
         int y = 1;
-        if(x++==2|++y==2){
+        if(x++==2||++y==2){   x++==2  就是先使用x 在进行加加
             x=7;
         }
         System.out.println("x="+x);
+
+        // 前加加 就是先加 再使用  后加加就是先使用再加
+        int x = 1;
+        int y = 0;
+		y = ++x + x++;
+		System.out.println("y="+y);  // 4
+		System.out.println("x="+x);  // 3
 
         // 三元运算符找最大值 记得有括号
         int a = 3;
