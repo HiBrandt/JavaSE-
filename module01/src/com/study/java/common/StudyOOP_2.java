@@ -6,7 +6,7 @@ package com.study.java.common;
  * 2.高内聚，低耦合。
  * 3.封装的三个体现：①私有化属性 ②私有化方法（意义就是内部调用，不让外部调用）③单例模式
  * 4.权限修饰符修饰类的时候只能用public和缺省
- * 5.四个修饰符  自己 同包 不同包 同一工程
+ * 5.四个修饰符  自己 同包 不同包 同一工程    private  (default)  protected  public
  * 6. Person p=new Person(); Person()就是构造器
  * 7. 构造器：权限修饰符 类名（参数）{}--->①创建对象用的②初始化对象属性
  * 8.一旦自己定义了构造器，默认的无参构造器就不在了。但是我们可以自己再定义一个无参的构造器，哈哈~~~
@@ -76,7 +76,7 @@ public class StudyOOP_2 {
         // 此外因为加了private使得legs 不能被获取 所以提供get方法以供获取属性
 
         //a.legs=-8;
-        a.setLegs(9);
+        a.setLegs(-8);
         a.show();
     }
 
@@ -108,7 +108,7 @@ class  Animal{
     // ③体会return 体会if else
     public void setLegs(int l){
         if(l<=0){
-            return;
+            return;  //这里的return表示退出结束方法，所以set失败 Legs为默认值
         }
         legs=l;
     }
